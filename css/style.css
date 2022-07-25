@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainblue: #7c5dfa;
+    --cardBG: #fff;
+    --textcolor: #000;
+    --statuscolor: #33d69f;
+    --background: #f2f2f2;
+    --midblue: #7e88c3;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* desktop */
+div.container h1 {
+    text-align: center; 
+    margin-top: 100px;
+}
+
+div.container div {
+    position: relative;
+    width: 730px;
+    margin: 30px auto 0 360px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    background-color: var(--cardBG);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+div.container div p {
+    margin: 30px auto;
+}
+
+div.container div:hover {
+    border: 1px solid var(--statuscolor);
+    cursor: pointer;
+}
+
+
+
+/* mobile  */
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    div.container div {
+        margin: 10px auto 0 auto;
+        width: 320px;
+        height: 130px;
+        border-radius: 5px;
+        background-color: var(--cardBG);
+    }
+
+    div.container h1 {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    div.container .card #number {
+        font-weight: 700;
+        font-size: 12px;
+        margin: 30px 0 auto 40px;
+    }
+
+    div.container .card #date {
+        font-weight: 500;
+        color: var(--midblue);
+        margin: 65px 0 40px -47px;
+    }
+
+    div.container .card #amount {
+        margin: 100px 0 auto -122px;
+        font-weight: 700;
+        font-size: 17px; 
+    }
+
+    div.container .card #name {
+        margin: 26px 0 auto 5px;
+        font-weight: 500;
+        color: var(--statuscolor);
+    }
+
+    div.container .card #status {
+        margin: 100px 0 auto -70px; 
+        font-size: 12px;
+    }
+}
+
+/* tablet  */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    div.container div {
+        margin: 20px auto 10px auto;
+        width: 700px
+    }
+
+    div.container h1 {
+        margin-top: 25px;
+    }
+}
